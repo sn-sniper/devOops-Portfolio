@@ -1,9 +1,11 @@
-import Subheader from "../components/ui/Subhead/Subheader"
-
+import "@styles/Testing.css"
+import Header from "@components/Header"
+import About from "@components/About"
+import AboutBox from "@components/ui/About-box/AboutBox"
 function Testing() {
   return (
     <div className='Testing-Container'>
-        <Subheader text="who are we"/>
+      <About />
     </div>
   )
 }

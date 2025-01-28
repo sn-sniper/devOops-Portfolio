@@ -1,0 +1,23 @@
+.overlay-img {
+    background-image: url('@assets/h5_deco-1.png');
+    background-position:50% 7.8rem;
+    background-repeat: no-repeat;
+    background-size: 90%;
+    height: 100vh;
+    width: 100vw;
+    pointer-events: none;
+    position: relative;
+
+    .overlay-wrapper{
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(50px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img{
+            opacity: .1;
+        }
+    }
+}

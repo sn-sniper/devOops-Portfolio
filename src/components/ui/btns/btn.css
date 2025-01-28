@@ -5,25 +5,25 @@
     justify-content: space-between;
     align-items: center;
     text-transform: capitalize;
-    border-radius: .8rem;
+    border-radius: 20px;
     font-weight: 600;
     font-size: 1.05rem;
     position: relative;
-    padding: .55rem;
+    padding: .4rem;
     color: #fff;
     cursor: pointer;
     transition: .3s ease-in-out all;
 
     .Arrow {
-        width: 45px;
+        width: 50px;
         font-size: 1rem !important;
-        border-radius: .5rem;
+        border-radius: 15px;
         height: 100%;
         background-color: #636edf;
         color: #fff;
         display: flex;
         align-items: center;
-        padding: 14px;
+        padding-left: 17px;
         transition: .3s ease-in-out all;
         
     }
@@ -31,7 +31,8 @@
     .btn-text {
         position: absolute;
         top: 28%;
-        right: 1.5rem;
+        transition: .3s ease-in-out all;
+        right: 1rem;
     }
 }
 
@@ -44,7 +45,7 @@
 }
 
 .btn-t.border-w {
-    border: 1px solid #ddd;
+    border: 1px solid #aaa;
 }
 
 .btn-t:hover {
@@ -54,6 +55,7 @@
     }
     color: #fff;
     .btn-text{    
+        color: white;
         animation: move-top 300ms;
     }
 }

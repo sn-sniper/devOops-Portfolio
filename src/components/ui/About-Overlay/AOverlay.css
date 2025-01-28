@@ -1,0 +1,26 @@
+.AOverlay-img {
+    width: 100%;
+    background-image: url("@assets/about_decor.png");
+    height: 50%;
+    background-repeat: no-repeat;
+    background-position: 50% 190%;
+    position: absolute;
+    bottom: 0;
+
+    .AOverlay-wrapper {
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(150px);
+    }
+
+}
+
+@media only screen and (max-width: 1008px) {
+    .AOverlay-img {
+        background-size: 700px;
+
+        .AOverlay-wrapper {
+            backdrop-filter: blur(45px);
+        }
+    }
+}

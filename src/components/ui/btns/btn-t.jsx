@@ -8,7 +8,7 @@ function Btnt({ bg, border, text }) {
     return (
         <button className={`btn-t ${bgColor ? "bg-w" : ""} ${border ? `border-w` : ""}`} >
             <span className='Arrow'><FaArrowRight className='arrow'/></span>
-            <p className='btn-text'>{Text}</p>
+            <p className={bgColor? "text-black btn-text":"btn-text"}>{Text}</p>
         </button>
     )
 }
