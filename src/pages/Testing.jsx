@@ -1,11 +1,9 @@
 import "@styles/Testing.css"
-import Header from "@components/Header"
-import About from "@components/About"
-import AboutBox from "@components/ui/About-box/AboutBox"
+import GoUp from "@components/ui/GoUpBtn/GoUp"
 function Testing() {
   return (
     <div className='Testing-Container'>
-      <About />
+      <GoUp />
     </div>
   )
 }

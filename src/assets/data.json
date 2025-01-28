@@ -1,0 +1,34 @@
+{
+    "about": [
+        {
+            "Number": "99",
+            "Sign": "%",
+            "h2": "Lorem ipsum",
+            "p": "Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "Number": "85",
+            "Sign": "%",
+            "h2": "Another Lorem ipsum",
+            "p": "Another Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "Number": "85",
+            "Sign": "%",
+            "h2": "Another Lorem ipsum",
+            "p": "Another Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "Number": "85",
+            "Sign": "%",
+            "h2": "Another Lorem ipsum",
+            "p": "Another Lorem ipsum dolor sit amet consectetur adipisicing."
+        },
+        {
+            "Number": "85",
+            "Sign": "%",
+            "h2": "Another Lorem ipsum",
+            "p": "Another Lorem ipsum dolor sit amet consectetur adipisicing."
+        }
+    ]
+}

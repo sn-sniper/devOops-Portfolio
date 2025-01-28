@@ -1,0 +1,18 @@
+.GoUp-container{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 1000;
+    background-color: #dfdee5;
+    color: #484848;
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.GoUp-container:hover{
+    background-color: #636edf;
+    color: #fff;
+}

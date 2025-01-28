@@ -15,7 +15,7 @@ export default function Header() {
                     <section className='img-sec'><img src={assets.header_img} alt="header_img" /></section>
                     <section className='text-sec'>
                         <Subheader text="Trusted Partner" bg={true} />
-                        <h1>Code. Create. <asd className="text-indigo-500">Elevate.</asd><br/>Your Vision,<br/>Our <asd className="text-indigo-700">Algorithms.</asd></h1>
+                        <h1>Code. Create. <span className="text-indigo-500">Elevate.</span><br/>Your Vision,<br/>Our <span className="text-indigo-700">Algorithms.</span></h1>
                         <h2>Turning Concepts into Cross-Platform Experiences</h2>
                         <Btnt text="view out work" bg={true} border={false} />
                     </section>
