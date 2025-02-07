@@ -1,10 +1,10 @@
 .Subheader-main{
     border: 1px solid #636edf4d;
     width: fit-content;
-    padding: 5px 14px;
+    padding: 5px 18px;
     display: flex;
     align-items: center;
-    gap: 1.46rem;
+    gap: 1.2rem;
     border-radius: 10px;
 
     .sub-flicker{

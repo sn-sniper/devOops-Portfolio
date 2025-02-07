@@ -1,9 +1,9 @@
 import "@styles/Testing.css"
-import GoUp from "@components/ui/GoUpBtn/GoUp"
+import Services from "@components/Services"
 function Testing() {
   return (
     <div className='Testing-Container'>
-      <GoUp />
+      <Services />
     </div>
   )
 }

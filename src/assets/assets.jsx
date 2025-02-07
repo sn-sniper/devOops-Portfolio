@@ -6,6 +6,8 @@ import h5_pattern from './h5_pattern.png'
 import a_decor from './about_decor.png'
 import hx_decor from './hx_decor.png'
 import hx_decor1 from './hx_decor1.png'
+import s1_img from './s1_img.jpg'
+import uxui from './uxui.svg'
 
 export const assets = {
     hx_decor,
@@ -15,5 +17,10 @@ export const assets = {
     h4_decor,
     h5_decor,
     h5_pattern,
-    header_img
+    header_img,
+    s1_img
+}
+
+export const svg = {
+    uxui
 }
