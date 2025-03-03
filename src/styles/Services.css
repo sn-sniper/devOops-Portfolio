@@ -1,10 +1,13 @@
 .Services-Container {
     display: grid;
     width: 100%;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     justify-content: center;
     align-items: center;
     padding: 0 5%;
+    height: fit-content;
+    gap: 1rem;
+
 
     .service-item {
         width: 318px;
@@ -27,7 +30,7 @@
             height: 100%;
 
             .thumb-img {
-                width: 100%;
+                /* width: 100%; */
                 height: 100%;
             }
         }
@@ -41,7 +44,7 @@
             left: 0;
             background-color: #000;
             z-index: 1;
-            opacity: 0.4;
+            opacity: 0.5;
         }
 
         .service-content {
@@ -63,6 +66,7 @@
                 align-items: center;
                 border: 1px solid #ddd;
                 border-radius: 1rem;
+                cursor: pointer;
 
                 a .arrow {
                     color: #fff;
@@ -82,40 +86,22 @@
             .service-title {
                 position: absolute;
                 bottom: 6rem;
-                display: flex;
                 text-transform: uppercase;
                 white-space: nowrap;
                 font-size: clamp(70px, 6.5vmax, 100px);
-                display: inline-flex;
-                width: max-content;
+                width: 100%;
+                overflow: hidden;
+                display: flex;
                 align-items: center;
-                transform: translateX(-105px);
 
                 .marquee {
-                    display: inline-flex;
+                    display: flex;
+                    white-space: nowrap;
+                    font-size: 8rem;
+                    font-weight: bold;
+                    gap: 1rem;
                     width: max-content;
-                    animation-name: scrollText;
-                    animation-iteration-count: infinite;
-                    animation-timing-function: linear;
-                    animation-duration: 6s;
                 }
-
-                .marq-1{
-                    animation-delay: 0s;
-                }
-                .marq-2{
-                    animation-delay: 3s;
-                }
-                .marq-3{
-                    animation-delay: 6s;
-                }
-
-                @keyframes scrollText {
-                    to {
-                        transform: translateX(-100%);
-                    }
-                }
-
             }
 
             .service-subtitle {
@@ -153,5 +139,199 @@
             }
         }
 
+    }
+
+
+
+    @media screen and (max-width: 1525px) {
+
+        .service-item:hover {
+            width: 450px;
+            color: #fff;
+
+            .service-thumb {
+                opacity: 1;
+            }
+
+            .service-btn {
+                background-color: #636edf;
+                border: 0;
+
+                a .arrow {
+                    scale: 1;
+                }
+
+                a img {
+                    scale: 0;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width: 1455px) {
+
+        .service-item:hover {
+            width: 400px;
+            color: #fff;
+
+            .service-thumb {
+                opacity: 1;
+            }
+
+            .service-btn {
+                background-color: #636edf;
+                border: 0;
+
+                a .arrow {
+                    scale: 1;
+                }
+
+                a img {
+                    scale: 0;
+                }
+            }
+
+        }
+
+        .service-item:hover~.service-item {
+            width: 300px;
+        }
+    }
+
+    @media screen and (max-width: 1399px) {
+
+        .service-item:hover {
+            width: 318px;
+            color: #fff;
+
+            .service-thumb {
+                opacity: 1;
+            }
+
+            .service-btn {
+                background-color: #636edf;
+                border: 0;
+
+                a .arrow {
+                    scale: 1;
+                }
+
+                a img {
+                    scale: 0;
+                }
+            }
+
+        }
+
+        .service-item:hover~.service-item {
+            width: 318px;
+        }
+    }
+
+    @media screen and (max-width: 1330px) {
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .service-item {
+            height: 400px;
+            width: 30vw;
+        }
+
+        .service-item:hover {
+            width: 30vw;
+            color: #fff;
+
+            .service-thumb {
+                opacity: 1;
+            }
+
+            .service-btn {
+                background-color: #636edf;
+                border: 0;
+
+                a .arrow {
+                    scale: 1;
+                }
+
+                a img {
+                    scale: 0;
+                }
+            }
+
+        }
+
+        .service-item:hover~.service-item {
+            width: 30vw;
+        }
+    }
+    @media screen and (max-width: 950px) {
+        grid-template-columns: 1fr 1fr;
+
+        .service-item {
+            height: 400px;
+            width: 45vw;
+        }
+
+        .service-item:hover {
+            width: 45vw;
+            color: #fff;
+
+            .service-thumb {
+                opacity: 1;
+            }
+
+            .service-btn {
+                background-color: #636edf;
+                border: 0;
+
+                a .arrow {
+                    scale: 1;
+                }
+
+                a img {
+                    scale: 0;
+                }
+            }
+
+        }
+
+        .service-item:hover~.service-item {
+            width: 45vw;
+        }
+    }
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+
+        .service-item {
+            height: 400px;
+            width: 100%;
+        }
+
+        .service-item:hover {
+            width: 100%;
+            color: #fff;
+
+            .service-thumb {
+                opacity: 1;
+            }
+
+            .service-btn {
+                background-color: #636edf;
+                border: 0;
+
+                a .arrow {
+                    scale: 1;
+                }
+
+                a img {
+                    scale: 0;
+                }
+            }
+
+        }
+
+        .service-item:hover~.service-item {
+            width: 100%;
+        }
     }
 }

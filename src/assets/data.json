@@ -30,5 +30,27 @@
             "h2": "Another Lorem ipsum",
             "p": "Another Lorem ipsum dolor sit amet consectetur adipisicing."
         }
+    ],
+    "services": [
+        {
+            "service":"UX/UI Design",
+            "svg":"uxui",
+            "thumb":"s1_img"
+        },
+        {
+            "service":"Web Development",
+            "svg":"web",
+            "thumb":"s2_img"
+        },
+        {
+            "service":"Mobile App",
+            "svg":"web",
+            "thumb":"s4_img"
+        },
+        {
+            "service":"System Software",
+            "svg":"system",
+            "thumb":"s3_img"
+        }
     ]
 }

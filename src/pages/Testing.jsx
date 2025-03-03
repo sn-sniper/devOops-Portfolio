@@ -1,9 +1,9 @@
 import "@styles/Testing.css"
-import Services from "@components/Services"
+import Expertises from "@components/Expertises"
 function Testing() {
   return (
     <div className='Testing-Container'>
-      <Services />
+      <Expertises />
     </div>
   )
 }
