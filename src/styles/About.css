@@ -57,6 +57,9 @@
                 justify-content: center;
                 flex-direction: column;
                 gap: 1rem;
+                @media (max-width: 1008px){
+                    width: 100%;
+                }
 
                 h1 {
                     font-size: 20px;
@@ -81,7 +84,7 @@
 
 
 
-    @media only screen and (max-width: 1008px) {
+    @media (max-width: 1008px) {
         .decor {
             display: none;
         }

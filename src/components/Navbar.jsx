@@ -4,7 +4,6 @@ import Separator from './ui/Separator/Separator'
 import "../styles/Navbar.css"
 function Navbar() {
     return (
-        <>
             <div className='Navbar-container'>
                 <h1 className='logo'>devOops</h1>
                 <ul className='nav-list'>
@@ -18,7 +17,6 @@ function Navbar() {
                 </ul>
                 <Btnt bg={false} text="get in touch" border={true}/>
             </div>
-        </>
     )
 }
 
