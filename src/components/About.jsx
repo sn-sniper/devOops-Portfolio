@@ -28,7 +28,7 @@ export default function About() {
                                 Voluptas delectus officia illum, accusamus molestias consectetur
                                 similique saepe maiores error quasi.
                             </h1>
-                            <Btnt text="book a call" bg={true} border={false} />
+                            <Btnt text="book a call" bg={true} border={true} />
                         </div>
                     </div>
                 </div>
