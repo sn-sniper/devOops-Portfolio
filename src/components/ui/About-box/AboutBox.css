@@ -1,6 +1,5 @@
 .AboutBox-container {
-    width: 90%;
-    /* height: 350px !important; */
+    width: 100%;
     background-color: #fff;
     border-radius: 1rem;
     padding: 3rem;
@@ -22,50 +21,8 @@
                 display: block;
                 width: 7px !important;
                 height: 7px !important;
-                background-color: #636edf;
                 border-radius: 2px;
             }
         }
-    }
-}
-
-.item {
-    position: absolute;
-    left: 5%;
-    animation-name: scrollDownToUp;
-    animation-duration: 30s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    margin-top: 10px;
-}
-
-.item-1 {
-    animation-delay: calc(30s / 5 * (10 - 10) * -1);
-    top: calc(100% + 10px);
-}
-
-.item-2 {
-    animation-delay: calc(30s / 5 * (10 - 8) * -1);
-    top: calc(100% + 20px);
-}
-
-.item-3 {
-    animation-delay: calc(30s / 5 * (10 - 6) * -1);
-    top: calc(100% + 30px);
-}
-
-.item-4 {
-    animation-delay: calc(30s / 5 * (10 - 4) * -1);
-    top: calc(100% + 40px);
-}
-
-.item-5 {
-    animation-delay: calc(30s / 5 * (10 - 2) * -1);
-    top: calc(100% + 50px);
-}
-
-@keyframes scrollDownToUp {
-    to {
-        top: -100%;
     }
 }

@@ -1,0 +1,18 @@
+.footer-link{
+    color:#000;
+    font-size: 1.5rem;
+    letter-spacing: -1px;
+    line-height: 38px;
+    overflow-wrap: break-word;
+    text-rendering: optimizeLegibility;
+    transition: .3s ease-in-out all;
+    font-weight: 600;
+    text-transform: capitalize;
+    
+    &:hover{
+        color: #636edf;
+    }
+}
+.icon{
+    color: #636edf;
+}

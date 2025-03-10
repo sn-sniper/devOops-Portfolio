@@ -1,9 +1,9 @@
 import React from 'react';
 import "./AboutBox.css";
 
-function AboutBox({ data , index }) {
+function AboutBox({ data, index }) {
     return (
-        <div className={'AboutBox-container item item-'+(index+1)}>
+        <div className='AboutBox-container'>
             <div className='AboutBox-top'>
                 <h1 className='subpixel-antialiased font-bold text-8xl'>
                     {data.Number}<sup className='text-6xl'>{data.Sign}</sup>

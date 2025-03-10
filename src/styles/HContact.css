@@ -1,0 +1,46 @@
+.HContact-Container{
+    width: 98.5%;
+    margin-left: .75%;
+    height: 90vh;
+    border-radius: 40px;
+    background: url('@assets/h5_img-2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before{
+        z-index: 0;
+        position: absolute;
+        display: flex;
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+    }
+
+    .HContact-content{
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 70%;
+        gap: 2rem;
+        
+        h1{
+            font-weight: 500;
+            font-size: 80px;
+            color: #fff;
+            line-height: 1.05em;
+            letter-spacing: -2px;
+            overflow-wrap: break-word;
+            text-align: center;
+            text-rendering: optimizeLegibility;
+        }
+    }
+}

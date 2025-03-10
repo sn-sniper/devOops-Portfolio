@@ -22,6 +22,10 @@
     }
 }
 
+.withBorder{
+    border: 1px solid #ffffff4d;
+}
+
 
 @keyframes fade{
     0%{

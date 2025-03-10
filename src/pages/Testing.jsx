@@ -1,9 +1,9 @@
-import "@styles/Testing.css"
-import Expertises from "@components/Expertises"
+import "@styles/Testing.css";
+import HContact from "@components/HContact";
 function Testing() {
   return (
     <div className='Testing-Container'>
-      <Expertises />
+      <HContact />
     </div>
   )
 }

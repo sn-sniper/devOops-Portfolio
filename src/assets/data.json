@@ -33,24 +33,84 @@
     ],
     "services": [
         {
-            "service":"UX/UI Design",
-            "svg":"uxui",
-            "thumb":"s1_img"
+            "service": "UX/UI Design",
+            "svg": "uxui",
+            "thumb": "s1_img"
         },
         {
-            "service":"Web Development",
-            "svg":"web",
-            "thumb":"s2_img"
+            "service": "Web Development",
+            "svg": "web",
+            "thumb": "s2_img"
         },
         {
-            "service":"Mobile App",
-            "svg":"web",
-            "thumb":"s4_img"
+            "service": "Mobile App",
+            "svg": "web",
+            "thumb": "s4_img"
         },
         {
-            "service":"System Software",
-            "svg":"system",
-            "thumb":"s3_img"
+            "service": "System Software",
+            "svg": "system",
+            "thumb": "s3_img"
+        }
+    ],
+    "footer_links": [
+        {
+            "text":"Work",
+            "link":"#"
+        }, 
+        {
+            "text":"Blog",
+            "link":"#"
+        }, 
+        {
+            "text":"Expertise",
+            "link":"#"
+        }, 
+        {
+            "text":"Careers",
+            "link":"#"
+        }, 
+        {
+            "text":"About",
+            "link":"#"
+        }, 
+        {
+            "text":"Partnerships",
+            "link":"#"
+        }, 
+        {
+            "text":"Team",
+            "link":"#"
+        }, 
+        {
+            "text":"Contact",
+            "link":"#"
+        }, 
+        {
+            "text":"Awards",
+            "link":"#"
+        }
+    ],
+    "footer_socials": [
+        {
+            "text":"facebook",
+            "link":"#",
+            "icon": true
+        },
+        {
+            "text":"twitter",
+            "link":"#",
+            "icon": true
+        },
+        {
+            "text":"linkedin",
+            "link":"#",
+            "icon": true
+        },
+        {
+            "text":"instagram",
+            "link":"#",
+            "icon": true
         }
     ]
 }

@@ -4,7 +4,7 @@ export default function Subheader({ text,bg }) {
     const [Text, SetText] = useState(text);
     const [bgcolor, setBgColor] = useState(bg);
     return (
-        <div className='Subheader-main'>
+        <div className={bgcolor ? "Subheader-main withBorder":'Subheader-main'}>
             <span className="sub-flicker"></span>
             <p className={bgcolor ? "text-white":''}>{Text}</p>
         </div>
