@@ -1,0 +1,36 @@
+.req-service-Container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.req-service-Container form input {
+  border: 2px solid #636edf;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
+.req-service-Container form select {
+  border: 2px solid #636edf;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+
+  option {
+    cursor: pointer;
+  }
+}
+
+.req-service-Container form button {
+  border: 2px solid transparent;
+  background-color: #636edf;
+  color: #fff;
+  padding: 5px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+}
