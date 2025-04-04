@@ -1,120 +1,70 @@
 .Footer-Container {
-    width: 100%;
-    position: relative;
-    height: 60vh;
-    padding: 2rem 1rem;
+  width: 100%;
+  position: relative;
+  height: 60vh;
+  padding: 2rem 1rem;
 
-    .footer-wrapper {
-        width: 100%;
-        height: 100%;
-        background-color: #fff;
-        border-radius: 40px;
+  .footer-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-basis: 90%;
+      border-bottom: 1px solid #f2f1f6;
+      margin-bottom: 10px;
+
+      .contact-info {
         display: flex;
         flex-direction: column;
-        padding: 2rem;
+        justify-content: center;
+        gap: 2rem;
 
-        .footer-top {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-basis: 90%;
-            border-bottom: 1px solid #f2f1f6;
-            margin-bottom: 10px;
-
-            .contact-info {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                gap: 1rem;
-
-                h2 {
-                    font-size: 1.5rem;
-                    font-weight: 400;
-                    color: #000;
-                }
-
-                span {
-                    background-color: #f2f1f6;
-                    font-size: 2rem;
-                    letter-spacing: -1px;
-                    font-weight: 600;
-                    line-height: 32px;
-                    padding: 6px 18px;
-                    border-radius: 10px;
-                    width: fit-content;
-                }
-
-                .phone {
-                    color: #636edf;
-                }
-            }
-
-            .footer-links {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                width: 500px;
-                @media (max-width: 768px){
-                    width: 100%;
-                }
-                .links {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-
-                    @media (max-width: 768px) {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 1rem;
-                    }
-                }
-            }
-
-            .footer-socials {
-                display: flex;
-                flex-direction: column;
-                gap: 1rem;
-                padding-right: 5%;
-            }
+        h2 {
+          font-size: 1.5rem;
+          font-weight: 400;
+          color: #000;
         }
+
+        span {
+          background-color: #f2f1f6;
+          font-size: 2rem;
+          letter-spacing: -1px;
+          font-weight: 600;
+          line-height: 32px;
+          padding: 6px 18px;
+          border-radius: 10px;
+          width: fit-content;
+        }
+
+        .phone {
+          color: #636edf;
+        }
+      }
+
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 500px;
+        .links {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+      .footer-socials {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding-right: 5%;
+      }
     }
-}
-
-@media (max-width: 768px) {
-    .Footer-Container {
-        height: auto;
-        padding: 1rem;
-
-        .footer-wrapper {
-            padding: 1.5rem;
-        }
-
-        .footer-top {
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            gap: 1.5rem;
-
-            .contact-info,
-            .footer-links,
-            .footer-socials {
-                width: 100%;
-            }
-
-            .footer-links {
-                .links {
-                    grid-template-columns: 1fr;
-                    text-align: center;
-                }
-            }
-
-            .footer-socials {
-                padding-right: 0;
-            }
-        }
-    }
-}
-
-.copy-right span {
-    color: #636edf;
-    font-weight: 600;
+  }
 }
