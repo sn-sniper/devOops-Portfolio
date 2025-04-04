@@ -25,7 +25,7 @@ export default function About() {
           </div>
           <div className="left-body">
             <h1>
-              At Devoops, we specialize in crafting intuitive user experiences
+              At DevOops, we specialize in crafting intuitive user experiences
               and delivering high-quality digital solutions. Whether it&apos;s
               designing sleek interfaces, developing robust web applications, or
               building scalable mobile apps, our team ensures every project

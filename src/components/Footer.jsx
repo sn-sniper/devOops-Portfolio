@@ -1,6 +1,7 @@
 import "@styles/Footer.css";
 import FooterLink from "./ui/Footer-Links/FooterLink";
 import data from "@assets/data.json";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -9,10 +10,18 @@ export default function Footer() {
         <div className="footer-top">
           <div className="contact-info">
             <p className="font-bold text-gray-500">DevOops</p>
-            <h2>Lorem ipsum dolor sit amet.</h2>
-            <span className="phone">+961 81 977 913</span>
-            <span className="phone">+1 619 873 1807</span>
-            <span className="email">support@devoops.info</span>
+            <h2>
+              <strong>Reach us</strong>
+            </h2>
+            <Link to="https://wa.me/96181977913" target="_blank">
+              <span className="phone">+961 81 977 913</span>
+            </Link>
+            <Link to="https://wa.me/16198371807" target="_blank">
+              <span className="phone">+1 (619) 873-1807</span>
+            </Link>
+            <Link to="mailto:support@devoops.info" target="_blank">
+              <span className="email">support@devoops.info</span>
+            </Link>
           </div>
           <div className="footer-links">
             <p className="font-bold text-gray-500 ">Links</p>
