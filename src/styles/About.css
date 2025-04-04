@@ -98,5 +98,27 @@
         }
       }
     }
+
+    .left-section{
+      flex-basis: 50%;
+    }
+    .right-section{
+      flex-basis: 50%;
+    }
   }
+
+  
+}
+@media (max-width: 768px) {
+    .About-container{
+      display: flex;
+      flex-direction: column !important;
+      
+      .left-section{
+        position: relative;
+        display: flex;
+        padding: 5% !important;
+      }
+    
+    }
 }

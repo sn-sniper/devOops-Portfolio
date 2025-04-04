@@ -13,8 +13,6 @@ export default function AboutBox({ data }) {
       </div>
       <div className="AboutBox-bottom">
         <p className="text-xl text-gray-500">
-          {/* {data.Number} */}
-          {/* {data.Sign} */}
           {data.p}
         </p>
       </div>
