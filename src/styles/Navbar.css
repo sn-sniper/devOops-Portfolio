@@ -4,19 +4,35 @@
     box-sizing: border-box;
 }
 
-.Navbar-container{
+.Navbar-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    height: 94px;
     font-size: 1.2rem;
-    .logo{
+
+    .logo {
         font-size: 1.65rem;
         color: #fff;
         font-weight: 700;
+        flex-basis: 50%;
+        transition: .2s ease-in-out all;
+
+        @media (max-width: 1100px) {
+            flex-basis: 25%;
+        }
+
+        @media (max-width: 900px) {
+            flex-basis: 15%;
+        }
     }
 
-    ul{
+    .burger {
+        display: none;
+    }
+
+    .nav-list {
         transform: translateX(5%);
         background-color: #ffffff1a;
         padding: 0 25px;
@@ -25,14 +41,15 @@
         display: flex;
         color: #fff;
         align-items: center;
-        .nav-item{
+
+        .nav-item {
             cursor: pointer;
             height: 100%;
             display: flex;
             align-items: center;
             font-weight: 600;
 
-            span{
+            span {
                 transform: translateY(0);
                 transition: all 0.3s ease;
                 opacity: 1;
@@ -41,26 +58,54 @@
             }
         }
 
-        .nav-item::before{
+        .nav-item::before {
             content: attr(data-title);
             position: absolute;
             top: 50%;
-            transform: translateY( calc(50% - 13px) );
+            transform: translateY(calc(50% - 13px));
             transition: all 0.3s ease;
             opacity: 0;
         }
 
-        .nav-item:hover{
-            span{
+        .nav-item:hover {
+            span {
                 opacity: 0;
             }
-            span, &::before{
-                transform: translateY(-13px);                
+
+            span,
+            &::before {
+                transform: translateY(-13px);
             }
-            &::before{
+
+            &::before {
                 opacity: 1;
             }
         }
     }
-}
 
+    @media (max-width: 835px) {
+        padding: 1rem 2rem;
+
+        .nav-list {
+            display: none;
+        }
+
+        .nav-content {
+            display: none;
+        }
+
+
+        .burger {
+            display: flex;
+            width: 2.5rem;
+            color: #fff;
+            font-size: 1.5em;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 2.5rem;
+            background-color: #6c63ff;
+        }
+    }
+}

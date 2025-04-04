@@ -20,4 +20,9 @@
             opacity: .1;
         }
     }
+
+    @media (max-width: 768px) {
+        background-position: 50% -150%;
+        background-size: 150%;
+    }
 }
