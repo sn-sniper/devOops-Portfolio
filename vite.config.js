@@ -17,6 +17,7 @@ export default defineConfig({
       "@styles": path.resolve(__dirname, "./src/styles"),
       "@api": path.resolve(__dirname, "./src/api"),
       "@handlers": path.resolve(__dirname, "./src/handlers"),
+      "@utils": path.resolve(__dirname, "./src/utils"),
     },
   },
 });
