@@ -10,8 +10,7 @@ export default function ServiceReqForm() {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [userPhone, setUserPhone] = useState("");
 
-  const proxyUrl =
-    "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
+  const proxyUrl ="https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
   const targetUrl = encodeURIComponent("https://restcountries.com/v3.1/all");
 
   useEffect(() => {

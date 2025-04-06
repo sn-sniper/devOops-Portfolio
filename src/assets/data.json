@@ -112,5 +112,127 @@
       "link": "#",
       "icon": true
     }
+  ],
+  "countries" :[
+  {
+    "name": "United States",
+    "cca2": "US",
+    "code": "+1",
+    "flag": "https://flagcdn.com/us.svg",
+    "coordinates": { "lat": 38.0, "lng": -97.0 }
+  },
+  {
+    "name": "Canada",
+    "cca2": "CA",
+    "code": "+1",
+    "flag": "https://flagcdn.com/ca.svg",
+    "coordinates": { "lat": 56.1304, "lng": -106.3468 }
+  },
+  {
+    "name": "United Kingdom",
+    "cca2": "GB",
+    "code": "+44",
+    "flag": "https://flagcdn.com/gb.svg",
+    "coordinates": { "lat": 55.3781, "lng": -3.4360 }
+  },
+  {
+    "name": "United Arab Emirates",
+    "cca2": "AE",
+    "code": "+971",
+    "flag": "https://flagcdn.com/ae.svg",
+    "coordinates": { "lat": 24.0, "lng": 54.0 }
+  },
+  {
+    "name": "Saudi Arabia",
+    "cca2": "SA",
+    "code": "+966",
+    "flag": "https://flagcdn.com/sa.svg",
+    "coordinates": { "lat": 24.7136, "lng": 46.6753 }
+  },
+  {
+    "name": "Australia",
+    "cca2": "AU",
+    "code": "+61",
+    "flag": "https://flagcdn.com/au.svg",
+    "coordinates": { "lat": -25.2744, "lng": 133.7751 }
+  },
+  {
+    "name": "Lebanon",
+    "cca2": "LB",
+    "code": "+961",
+    "flag": "https://flagcdn.com/lb.svg",
+    "coordinates": { "lat": 33.8547, "lng": 35.8623 }
+  },
+  {
+    "name": "Bahrain",
+    "cca2": "BH",
+    "code": "+973",
+    "flag": "https://flagcdn.com/bh.svg",
+    "coordinates": { "lat": 26.0667, "lng": 50.5577 }
+  },
+  {
+    "name": "Germany",
+    "cca2": "DE",
+    "code": "+49",
+    "flag": "https://flagcdn.com/de.svg",
+    "coordinates": { "lat": 51.1657, "lng": 10.4515 }
+  },
+  {
+    "name": "Egypt",
+    "cca2": "EG",
+    "code": "+20",
+    "flag": "https://flagcdn.com/eg.svg",
+    "coordinates": { "lat": 26.8206, "lng": 30.8025 }
+  },
+  {
+    "name": "Palestine",
+    "cca2": "PS",
+    "code": "+970",
+    "flag": "https://flagcdn.com/ps.svg",
+    "coordinates": { "lat": 31.9522, "lng": 35.2332 }
+  },
+  {
+    "name": "Turkey",
+    "cca2": "TR",
+    "code": "+90",
+    "flag": "https://flagcdn.com/tr.svg",
+    "coordinates": { "lat": 38.9637, "lng": 35.2433 }
+  },
+  {
+    "name": "Jordan",
+    "cca2": "JO",
+    "code": "+962",
+    "flag": "https://flagcdn.com/jo.svg",
+    "coordinates": { "lat": 30.5852, "lng": 36.2384 }
+  },
+  {
+    "name": "Iraq",
+    "cca2": "IQ",
+    "code": "+964",
+    "flag": "https://flagcdn.com/iq.svg",
+    "coordinates": { "lat": 33.2232, "lng": 43.6793 }
+  },
+  {
+    "name": "Kuwait",
+    "cca2": "KW",
+    "code": "+965",
+    "flag": "https://flagcdn.com/kw.svg",
+    "coordinates": { "lat": 29.3759, "lng": 47.9774 }
+  },
+  {
+    "name": "Italy",
+    "cca2": "IT",
+    "code": "+39",
+    "flag": "https://flagcdn.com/it.svg",
+    "coordinates": { "lat": 41.8719, "lng": 12.5674 }
+  },
+  {
+    "name": "France",
+    "cca2": "FR",
+    "code": "+33",
+    "flag": "https://flagcdn.com/fr.svg",
+    "coordinates": { "lat": 46.6034, "lng": 1.8883 }
+  }
+
   ]
 }
