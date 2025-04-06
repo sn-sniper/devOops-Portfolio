@@ -6,6 +6,7 @@ import { GooglePlay } from "grommet-icons";
 import { Desktop } from "grommet-icons";
 import { Help } from "grommet-icons";
 import "./SelectDropdown.css";
+import PropTypes from "prop-types";
 
 const options = [
   { label: "UI UX", value: "uiux", icon: <Figma color="plain" /> },
@@ -15,13 +16,17 @@ const options = [
   { label: "Other", value: "other", icon: <Help color="red" /> },
 ];
 
-export default function SelectDropdown() {
+export default function SelectDropdown({ Data, setData }) {
   const [isOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(null);
+  // const [selected, setSelected] = useState(null);
   const dropdownRef = useRef(null);
 
   const handleOptionClick = (option) => {
-    setSelected(option);
+    // setSelected(option);
+    setData((prev) => ({
+      ...prev,
+      selectedService: option.label,
+    }));
     setIsOpen(false);
   };
 
@@ -38,7 +43,7 @@ export default function SelectDropdown() {
   return (
     <div className="custom-dropdown" ref={dropdownRef}>
       <div className="dropdown-header" onClick={() => setIsOpen(!isOpen)}>
-        <span>{selected ? selected.label : "Select a platform"}</span>
+        <span>{Data ? Data : "Select a platform"}</span>
         <FaChevronDown className={`chevron ${isOpen ? "open" : ""}`} />
       </div>
       {isOpen && (
@@ -58,3 +63,8 @@ export default function SelectDropdown() {
     </div>
   );
 }
+
+SelectDropdown.propTypes = {
+  Data: PropTypes.string,
+  setData: PropTypes.func.isRequired,
+};

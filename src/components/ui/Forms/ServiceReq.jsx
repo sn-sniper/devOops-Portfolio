@@ -1,18 +1,25 @@
 import { useEffect, useState } from "react";
 import "./ServiceReq.css";
 import SelectDropdown from "../Select-Dropdown/SelectDropdown";
-import { AsYouType } from "libphonenumber-js";
+import emailjs from "emailjs-com";
+// import { AsYouType } from "libphonenumber-js";
+import { isValidPhoneNumber, formatPhoneNumber } from "@utils/Validations";
 import axios from "axios";
 
 export default function ServiceReqForm() {
   const [countries, setCountries] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedCountry, setSelectedCountry] = useState(null);
-  const [userPhone, setUserPhone] = useState("");
+  const [data, setData] = useState({
+    selectedCountry: "",
+    userPhone: "",
+    selectedService: "",
+  });
+  // const [selectedCountry, setSelectedCountry] = useState(null);
+  // const [userPhone, setUserPhone] = useState("");
 
-  const proxyUrl =
-    "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
-  const targetUrl = encodeURIComponent("https://restcountries.com/v3.1/all");
+  // const proxyUrl =
+  //   "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
+  // const targetUrl = encodeURIComponent("https://restcountries.com/v3.1/all");
 
   useEffect(() => {
     const fetchCountries = async () => {
@@ -37,7 +44,10 @@ export default function ServiceReqForm() {
           .sort((a, b) => a.name.localeCompare(b.name));
 
         setCountries(options);
-        setSelectedCountry(options.find((c) => c.code === "+961"));
+        setData((prev) => ({
+          ...prev,
+          selectedCountry: options.find((c) => c.code === "+961"),
+        }));
       } catch (err) {
         console.error("Error fetching countries", err);
       }
@@ -49,32 +59,72 @@ export default function ServiceReqForm() {
   const toggleDropdown = () => setIsOpen(!isOpen);
 
   const selectCountry = (country) => {
-    setSelectedCountry(country);
+    setData((prev) => ({
+      ...prev,
+      selectedCountry: country,
+    }));
     setIsOpen(false);
-    setUserPhone("");
+    setData((prev) => ({
+      ...prev,
+      userPhone: "",
+    }));
   };
 
   const handlePhoneChange = (e) => {
     const raw = e.target.value.replace(/\D/g, "");
-    const formatter = new AsYouType(selectedCountry?.name || "US");
-    const formatted = formatter.input(raw);
-    setUserPhone(formatted);
+    const formatted = formatPhoneNumber(
+      raw,
+      data.selectedCountry?.name || "US"
+    );
+    setData((prev) => ({
+      ...prev,
+      userPhone: formatted,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (!isValidPhoneNumber(data.userPhone, data.selectedCountry?.name)) {
+      alert("Invalid phone number");
+      return;
+    }
+    const templateParams = {
+      user_phone: data.userPhone,
+      selected_service: data.selectedService,
+    };
+
+    emailjs
+      .send(
+        "service_4x3z5qk",
+        "template_8v7xj5k",
+        templateParams,
+        "user_0Q2t9m3g1pH1Zl2h2h2h2"
+      )
+      .then((response) => {
+        console.log("Email sent successfully", response);
+        alert("Email sent successfully");
+      })
+      .catch((error) => {
+        console.error("Error sending email", error);
+        alert("Error sending email");
+      });
   };
 
   return (
     <div className="req-service-Container">
-      <form>
+      <form onClick={handleSubmit}>
         <div className="phone-input-container flex gap-4 items-center relative">
           <div className="custom-dropdown" onClick={toggleDropdown}>
-            {selectedCountry && (
+            {data.selectedCountry && (
               <div className="selected-option w-[170px] bg-white flex items-center gap-4 cursor-pointer duration-300 hover:bg-[#f5f5f5] py-1 px-2 rounded">
                 <img
-                  src={selectedCountry.flag}
-                  alt={selectedCountry.name}
+                  src={data.selectedCountry.flag}
+                  alt={data.selectedCountry.name}
                   width={20}
                 />
                 <span>
-                  {selectedCountry.name} ({selectedCountry.code})
+                  {data.selectedCountry.name} ({data.selectedCountry.code})
                 </span>
               </div>
             )}
@@ -99,13 +149,13 @@ export default function ServiceReqForm() {
           <input
             type="text"
             placeholder="Enter your phone number"
-            value={userPhone}
+            value={data.userPhone}
             onChange={handlePhoneChange}
             className="number-input"
           />
         </div>
 
-        <SelectDropdown />
+        <SelectDropdown Data={data.selectedService} setData={setData} />
 
         <div className="btn-container flex w-full align-center justify-center py-2">
           <button className="btn" type="submit">
