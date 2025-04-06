@@ -7,7 +7,6 @@ import { Desktop } from "grommet-icons";
 import { Help } from "grommet-icons";
 import "./SelectDropdown.css";
 
-
 const options = [
   { label: "UI UX", value: "uiux", icon: <Figma color="plain" /> },
   { label: "Website", value: "website", icon: <Template color="#636edf" /> },
