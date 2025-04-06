@@ -21,7 +21,9 @@ export default function Modal({ isOpen, onClose, header, children }) {
     };
     if (isOpen) {
       document.addEventListener("keydown", handleEscape);
+      document.body.classList.add("overflow-hidden");
       return () => {
+        document.body.classList.remove("overflow-hidden");
         document.removeEventListener("keydown", handleEscape);
       };
     }
