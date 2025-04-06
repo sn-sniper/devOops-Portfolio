@@ -19,27 +19,21 @@
 
 .req-service-Container form input {
     height: 35px;
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px;
     outline: none;
-    /* border: 1px solid #303030; */
-    border-bottom: 2px solid #9a9a9a;
+    border-bottom: 2px solid transparent;
     padding-left: 10px;
     padding-right: 10px;
-    background-color: #f2f2f2;
+    background-color: #fff;
     transition: all 0.3s ease;
 
-    &::placeholder{
-      color: #999;
-    }
-
     &:hover{
-      background-color: #e8e8e8;
+      background-color: #f0f0f0;
     }
 
     &:focus,
     &:active{
-      background-color: #e8e8e8;
-      /* border: 1px solid #2d2d2d; */
+      border-radius: 5px 5px 0 0;
       border-bottom: 2px solid #636edf;
     }
 }

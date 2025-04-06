@@ -1,7 +1,8 @@
 .custom-dropdown {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
+  min-width: 170px;
   font-family: sans-serif;
 }
 
