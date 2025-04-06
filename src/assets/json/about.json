@@ -1,0 +1,34 @@
+{
+  "about": [
+    {
+      "Number": "95",
+      "Sign": "%",
+      "h2": "Customer Satisfaction Rate",
+      "p": "We pride ourselves on delivering exceptional service, ensuring 95% customer satisfaction across all projects."
+    },
+    {
+      "Number": "93",
+      "Sign": "%",
+      "h2": "On-Time Delivery",
+      "p": "With streamlined workflows and agile project management, 93% of our projects are delivered on time , ensuring reliability for our clients."
+    },
+    {
+      "Number": "80",
+      "Sign": "%",
+      "h2": "Client Retention Rate",
+      "p": "By fostering transparent communication and delivering value, we’ve built strong partnerships, resulting in an 80% client retention rate ."
+    },
+    {
+      "Number": "85",
+      "Sign": "%",
+      "h2": "Projects Completed Within Budget",
+      "p": "We prioritize cost efficiency, completing 85% of projects within budget to help clients achieve their goals without overspending."
+    },
+    {
+      "Number": "95",
+      "Sign": "%",
+      "h2": "Positive Feedback on UI/UX Design",
+      "p": "Clients love our designs! 95% of feedback highlights our intuitive, visually stunning interfaces , a core strength of Devoops."
+    }
+  ]
+}

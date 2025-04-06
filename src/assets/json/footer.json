@@ -1,0 +1,63 @@
+{
+  "footer_links": [
+    {
+      "text": "Work",
+      "link": "#"
+    },
+    {
+      "text": "Blog",
+      "link": "#"
+    },
+    {
+      "text": "Expertise",
+      "link": "#"
+    },
+    {
+      "text": "Careers",
+      "link": "#"
+    },
+    {
+      "text": "About",
+      "link": "#"
+    },
+    {
+      "text": "Partnerships",
+      "link": "#"
+    },
+    {
+      "text": "Team",
+      "link": "#"
+    },
+    {
+      "text": "Contact",
+      "link": "#"
+    },
+    {
+      "text": "Awards",
+      "link": "#"
+    }
+  ],
+  
+  "footer_socials": [
+    {
+      "text": "facebook",
+      "link": "#",
+      "icon": true
+    },
+    {
+      "text": "twitter",
+      "link": "#",
+      "icon": true
+    },
+    {
+      "text": "linkedin",
+      "link": "#",
+      "icon": true
+    },
+    {
+      "text": "instagram",
+      "link": "#",
+      "icon": true
+    }
+  ]
+}

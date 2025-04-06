@@ -44,13 +44,6 @@ export default function ServiceItem({ item }) {
         <div className="service-subtitle">{item.service}</div>
       </div>
     </div>
-    // <div className="Services-Container">
-    //   {data.services.map((item, index) => {
-    //     return (
-
-    //     );
-    //   })}
-    // </div>
   );
 }
 

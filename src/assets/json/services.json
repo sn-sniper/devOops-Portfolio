@@ -1,0 +1,24 @@
+{
+  "services": [
+    {
+      "service": "UX/UI Design",
+      "svg": "uxui",
+      "thumb": "s1"
+    },
+    {
+      "service": "Web Development",
+      "svg": "web",
+      "thumb": "s2"
+    },
+    {
+      "service": "Mobile App",
+      "svg": "web",
+      "thumb": "s4"
+    },
+    {
+      "service": "System Software",
+      "svg": "system",
+      "thumb": "s3"
+    }
+  ]
+}

@@ -1,33 +1,33 @@
-import h1_bg from "./h1_bg-1.png";
-import h4_decor from "./h4_decor1.png";
-import h5_decor from "./h5_deco-1.png";
-import header_img from "./team.jpg";
-import h_contact_img from "./team2.jpg";
-import h5_pattern from "./h5_pattern.png";
-import a_decor from "./about_decor.png";
-import hx_decor from "./hx_decor.png";
-import hx_decor1 from "./hx_decor1.png";
-import s1_img from "./ui-ux.jpg";
-import s2_img from "./web-dev.jpg";
-import s3_img from "./sys-soft.jpg";
-import s4_img from "./mob-dev.jpg";
-import uxui from "./uxui.svg";
-import web from "./web.svg";
-import system from "./system.svg";
+//imgs
+import a_decor from "./images/about_decor.png";
+import hx_decor1 from "./images/hx_decor1.png"
+import h1_bg from "./images/h1_bg-1.png"
+import h5_decor from "./images/h5_deco-1.png"
+import h5_pattern from "./images/h5_pattern.png"
+import team from "./images/team2.jpg"
+import header_img from "./images/team.jpg";
+import s1 from "./images/ui-ux.jpg"
+import s2 from "./images/web-dev.jpg"
+import s3 from "./images/mob-dev.jpg"
+import s4 from "./images/sys-soft.jpg"
+
+// SVGs
+import uxui from "./images/uxui.svg"
+import web from "./images/web.svg"
+import system from "./images/system.svg"
+
 export const assets = {
-  hx_decor,
-  hx_decor1,
   a_decor,
+  hx_decor1,
   h1_bg,
-  h4_decor,
   h5_decor,
   h5_pattern,
+  team,
   header_img,
-  s1_img,
-  s2_img,
-  s3_img,
-  s4_img,
-  h_contact_img,
+  s1,
+  s2,
+  s3,
+  s4,
 };
 
 export const svg = {

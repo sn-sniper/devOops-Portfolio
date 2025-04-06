@@ -1,6 +1,6 @@
 import "@styles/Footer.css";
 import FooterLink from "./ui/Footer-Links/FooterLink";
-import data from "@assets/data.json";
+import data from "@assets/json/footer.json";
 import { Link } from "react-router-dom";
 
 export default function Footer() {

@@ -22,7 +22,7 @@ function Navbar() {
   return (
     <div className="relative w-screen Navbar-container">
       <h1 className="logo">devOops</h1>
-      <div className="flex items-center justify-between w-full nav-content">
+      <div className="flex items-center justify-between w-full nav-content [padding-right:5rem]">
         <ul className="hidden nav-list md:flex">
           <li className="nav-item" data-title="Home">
             <span>Home</span>

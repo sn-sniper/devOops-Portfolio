@@ -4,7 +4,7 @@ import { assets } from "@assets/assets";
 import Subheader from "./ui/Subhead/Subheader";
 import Btnt from "./ui/btns/btn-t";
 import AboutBox from "./ui/About-box/AboutBox";
-import data from "@assets/data.json";
+import data from "@assets/json/about.json";
 
 export default function About() {
   return (

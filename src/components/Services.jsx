@@ -1,5 +1,5 @@
 import "@styles/Services.css";
-import data from "@assets/data.json";
+import data from "@assets/json/services.json";
 import ServiceItem from "./ServiceItem";
 
 export default function Services() {
