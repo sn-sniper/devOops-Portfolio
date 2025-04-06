@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "./ServiceReq.css";
 import SelectDropdown from "../Select-Dropdown/SelectDropdown";
 import { AsYouType } from "libphonenumber-js";
+import axios from "axios";
 
 export default function ServiceReqForm() {
   const [countries, setCountries] = useState([]);
@@ -9,11 +10,16 @@ export default function ServiceReqForm() {
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [userPhone, setUserPhone] = useState("");
 
+  const proxyUrl =
+    "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
+  const targetUrl = encodeURIComponent("https://restcountries.com/v3.1/all");
+
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        const res = await fetch("https://restcountries.com/v3.1/all");
-        const data = await res.json();
+        // const { data } = await axios.get(proxyUrl + targetUrl);
+        const { data } = await axios.get("https://restcountries.com/v3.1/all");
+        // const data = await res.json();
 
         const options = data
           .filter(
@@ -25,7 +31,7 @@ export default function ServiceReqForm() {
           )
           .map((country) => ({
             name: country.cca2,
-            code: country.idd.root + country.idd.suffixes[0], 
+            code: country.idd.root + country.idd.suffixes[0],
             flag: country.flags.png,
           }))
           .sort((a, b) => a.name.localeCompare(b.name));
@@ -59,12 +65,17 @@ export default function ServiceReqForm() {
     <div className="req-service-Container">
       <form>
         <div className="phone-input-container flex gap-4 items-center relative">
-
           <div className="custom-dropdown" onClick={toggleDropdown}>
             {selectedCountry && (
               <div className="selected-option w-[170px] bg-white flex items-center gap-4 cursor-pointer duration-300 hover:bg-[#f5f5f5] py-1 px-2 rounded">
-                <img src={selectedCountry.flag} alt={selectedCountry.name} width={20} />
-                <span>{selectedCountry.name} ({selectedCountry.code})</span>
+                <img
+                  src={selectedCountry.flag}
+                  alt={selectedCountry.name}
+                  width={20}
+                />
+                <span>
+                  {selectedCountry.name} ({selectedCountry.code})
+                </span>
               </div>
             )}
             {isOpen && (
@@ -76,7 +87,9 @@ export default function ServiceReqForm() {
                     onClick={() => selectCountry(country)}
                   >
                     <img src={country.flag} alt={country.name} width={20} />
-                    <span>{country.name} ({country.code})</span>
+                    <span>
+                      {country.name} ({country.code})
+                    </span>
                   </div>
                 ))}
               </div>
