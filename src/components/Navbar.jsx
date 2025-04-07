@@ -97,6 +97,15 @@ function Navbar() {
             <span>Contact</span>
           </li>
         </ul>
+        <div className="p-5">
+        <Btnt
+          bg={true}
+          text="get in touch"
+          border={true}
+          className="hidden md:block"
+          action={() => setIsModalOpen(true)}
+        />
+        </div>
       </div>
     </div>
   );
