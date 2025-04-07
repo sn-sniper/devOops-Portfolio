@@ -4,6 +4,7 @@ import Separator from "./ui/Separator/Separator";
 import { HiMenu, HiX } from "react-icons/hi";
 import Modal from "./ui/Modal/Modal";
 import ServiceReqForm from "./ui/Forms/ServiceReq";
+import { svg } from "@assets/assets";
 import "../styles/Navbar.css";
 
 function Navbar() {
@@ -21,7 +22,9 @@ function Navbar() {
 
   return (
     <div className="relative w-screen Navbar-container">
-      <h1 className="logo">devOops</h1>
+      <h1 className="logo">
+        <img src={svg.logo} alt="DevOops" className="w-[200px]"/>
+      </h1>
       <div className="flex items-center justify-between w-full nav-content [padding-right:5rem]">
         <ul className="hidden nav-list md:flex">
           <li className="nav-item" data-title="Home">
