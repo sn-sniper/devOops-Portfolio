@@ -62,7 +62,6 @@ function Navbar() {
         <HiMenu size={28} />
       </div>
 
-      {/* Dark Overlay */}
       {menuOpen && (
         <div
           className="fixed inset-0 z-40 bg-black bg-opacity-50"
@@ -70,7 +69,6 @@ function Navbar() {
         ></div>
       )}
 
-      {/* Sidebar Menu (Expands in Width) */}
       <div
         className={`fixed top-0 right-0 h-full bg-white shadow-lg transition-all duration-300 ease-in-out ${
           menuOpen ? "w-64" : "w-0"
