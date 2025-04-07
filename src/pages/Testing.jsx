@@ -1,10 +1,10 @@
 import "@styles/Testing.css";
-import SelectDropdown from "@components/ui/Select-Dropdown/SelectDropdown";
-
+import Footer from "@components/Footer";
 function Testing() {
   return (
     <div className="Testing-Container">
-      <SelectDropdown />
+
+      <Footer />
     </div>
   );
 }

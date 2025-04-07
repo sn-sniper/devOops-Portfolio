@@ -39,3 +39,11 @@ body.overflow-hidden {
   color: #fff;
   background-color: #636edf;
 }
+
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+}

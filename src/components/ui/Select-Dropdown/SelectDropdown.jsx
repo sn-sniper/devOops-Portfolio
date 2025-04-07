@@ -43,7 +43,7 @@ export default function SelectDropdown({ Data, setData }) {
   return (
     <div className="custom-dropdown" ref={dropdownRef}>
       <div className="dropdown-header" onClick={() => setIsOpen(!isOpen)}>
-        <span>{Data ? Data : "Select a platform"}</span>
+        <span>{Data ? Data : "Select a service"}</span>
         <FaChevronDown className={`chevron ${isOpen ? "open" : ""}`} />
       </div>
       {isOpen && (

@@ -86,7 +86,7 @@ export default function ServiceReqForm() {
     e.preventDefault();
 
     if (!isValidPhoneNumber(data.userPhone, data.selectedCountry?.name)) {
-      alert("Invalid phone number");
+      // alert("Invalid phone number");
       return;
     }
     const templateParams = {
@@ -103,11 +103,11 @@ export default function ServiceReqForm() {
       )
       .then((response) => {
         console.log("Email sent successfully", response);
-        alert("Email sent successfully");
+        // alert("Email sent successfully");
       })
       .catch((error) => {
         console.error("Error sending email", error);
-        alert("Error sending email");
+        // alert("Error sending email");
       });
   };
 
