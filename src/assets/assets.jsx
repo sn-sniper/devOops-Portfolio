@@ -14,8 +14,9 @@ import s4 from "./images/mob-dev.jpg";
 // SVGs
 import uxui from "./images/uxui.svg";
 import web from "./images/web.svg";
+import mobile from "./images/mobile.svg";
 import system from "./images/system.svg";
-import logo from "./images/LOGO.svg"
+import logo from "./images/LOGO.svg";
 
 export const assets = {
   a_decor,
@@ -34,6 +35,7 @@ export const assets = {
 export const svg = {
   uxui,
   web,
+  mobile,
   system,
-  logo
+  logo,
 };
