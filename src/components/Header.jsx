@@ -19,7 +19,7 @@ export default function Header() {
             <h1>
               Code. Create. <span className="text-indigo-500">Elevate.</span>
               <br />
-              Your Vision,
+              Secure Your Vision By
               <br />
               Our <span className="text-indigo-700">Algorithms.</span>
             </h1>
