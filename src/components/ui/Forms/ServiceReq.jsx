@@ -1,32 +1,31 @@
 import { useEffect, useState } from "react";
 import "./ServiceReq.css";
 import SelectDropdown from "../Select-Dropdown/SelectDropdown";
-import emailjs from "emailjs-com";
-// import { AsYouType } from "libphonenumber-js";
-import { isValidPhoneNumber, formatPhoneNumber } from "@utils/Validations";
+import {
+  selectCountry,
+  handleDataChange,
+  handlePhoneChange,
+  handleSubmit,
+} from "@handlers/ReqFormActionsHandles.jsx";
 import axios from "axios";
 
 export default function ServiceReqForm() {
   const [countries, setCountries] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({
+    title: "",
+    first_name: "",
+    last_name: "",
+    email: "",
     selectedCountry: "",
     userPhone: "",
     selectedService: "",
   });
-  // const [selectedCountry, setSelectedCountry] = useState(null);
-  // const [userPhone, setUserPhone] = useState("");
-
-  // const proxyUrl =
-  //   "https://api.allorigins.hexocode.repl.co/get?disableCache=true&url=";
-  // const targetUrl = encodeURIComponent("https://restcountries.com/v3.1/all");
 
   useEffect(() => {
     const fetchCountries = async () => {
       try {
-        // const { data } = await axios.get(proxyUrl + targetUrl);
         const { data } = await axios.get("https://restcountries.com/v3.1/all");
-        // const data = await res.json();
 
         const options = data
           .filter(
@@ -58,63 +57,54 @@ export default function ServiceReqForm() {
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
-  const selectCountry = (country) => {
-    setData((prev) => ({
-      ...prev,
-      selectedCountry: country,
-    }));
-    setIsOpen(false);
-    setData((prev) => ({
-      ...prev,
-      userPhone: "",
-    }));
-  };
-
-  const handlePhoneChange = (e) => {
-    const raw = e.target.value.replace(/\D/g, "");
-    const formatted = formatPhoneNumber(
-      raw,
-      data.selectedCountry?.name || "US"
-    );
-    setData((prev) => ({
-      ...prev,
-      userPhone: formatted,
-    }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (!isValidPhoneNumber(data.userPhone, data.selectedCountry?.name)) {
-      // alert("Invalid phone number");
-      return;
-    }
-    const templateParams = {
-      user_phone: data.userPhone,
-      selected_service: data.selectedService,
-    };
-
-    emailjs
-      .send(
-        "service_4x3z5qk",
-        "template_8v7xj5k",
-        templateParams,
-        "user_0Q2t9m3g1pH1Zl2h2h2h2"
-      )
-      .then((response) => {
-        console.log("Email sent successfully", response);
-        // alert("Email sent successfully");
-      })
-      .catch((error) => {
-        console.error("Error sending email", error);
-        // alert("Error sending email");
-      });
-  };
-
   return (
     <div className="req-service-Container">
-      <form onClick={handleSubmit}>
+      <form
+        onSubmit={(e) => {
+          handleSubmit(e, data);
+        }}
+      >
         <div className="phone-input-container flex gap-4 items-center relative">
+          <input
+            type="text"
+            name="title"
+            placeholder="Title"
+            value={data.title}
+            onChange={(e) => {
+              handleDataChange(e, setData);
+            }}
+            className="title-input"
+          />
+          <input
+            type="text"
+            name="first_name"
+            placeholder="First name"
+            value={data.first_name}
+            onChange={(e) => {
+              handleDataChange(e, setData);
+            }}
+            className="first_name-input"
+          />
+          <input
+            type="text"
+            name="last_name"
+            placeholder="Last name"
+            value={data.last_name}
+            onChange={(e) => {
+              handleDataChange(e, setData);
+            }}
+            className="last_name-input"
+          />
+          <input
+            type="text"
+            name="email"
+            placeholder="Email"
+            value={data.email}
+            onChange={(e) => {
+              handleDataChange(e, setData);
+            }}
+            className="email-input"
+          />
           <div className="custom-dropdown" onClick={toggleDropdown}>
             {data.selectedCountry && (
               <div className="selected-option w-[170px] bg-white flex items-center gap-4 cursor-pointer duration-300 hover:bg-[#f5f5f5] py-1 px-2 rounded">
@@ -134,7 +124,7 @@ export default function ServiceReqForm() {
                   <div
                     key={index}
                     className="dropdown-item flex items-center gap-2 px-2 py-1 cursor-pointer hover:bg-gray-200"
-                    onClick={() => selectCountry(country)}
+                    onClick={() => selectCountry(country, setData, setIsOpen)}
                   >
                     <img src={country.flag} alt={country.name} width={20} />
                     <span>
@@ -150,7 +140,9 @@ export default function ServiceReqForm() {
             type="text"
             placeholder="Enter your phone number"
             value={data.userPhone}
-            onChange={handlePhoneChange}
+            onChange={(e) => {
+              handlePhoneChange(e, data, setData);
+            }}
             className="number-input"
           />
         </div>
