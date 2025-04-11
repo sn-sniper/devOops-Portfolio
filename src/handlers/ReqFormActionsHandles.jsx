@@ -27,7 +27,7 @@ export const handleDataChange = (e, setData) => {
 
 export const handlePhoneChange = (e, data, setData) => {
   const raw = e.target.value.replace(/\D/g, "");
-  const formatted = formatPhoneNumber(raw, data.selectedCountry?.name || "US");
+  const formatted = formatPhoneNumber(raw, data.selectedCountry?.cca2);
   setData((prev) => ({
     ...prev,
     userPhone: formatted,
@@ -38,7 +38,7 @@ export const handleSubmit = (e, data) => {
   e.preventDefault();
   console.log(data);
 
-  if (!isValidPhoneNumber(data.userPhone, data.selectedCountry?.name)) {
+  if (!isValidPhoneNumber(data.userPhone, data.selectedCountry?.cca2)) {
     alert("Invalid phone number");
     return;
   }
