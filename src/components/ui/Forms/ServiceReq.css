@@ -26,7 +26,8 @@
     padding-right: 10px;
     background-color: #fff;
     transition: all 0.3s ease;
-
+    min-width: 260px;
+    width: 100%;
     &:hover{
       background-color: #f0f0f0;
     }

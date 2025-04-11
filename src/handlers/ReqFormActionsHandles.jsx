@@ -27,7 +27,7 @@ export const handleDataChange = (e, setData) => {
 
 export const handlePhoneChange = (e, data, setData) => {
   const raw = e.target.value.replace(/\D/g, "");
-  const formatted = formatPhoneNumber(raw, data.selectedCountry?.name || "US");
+  const formatted = formatPhoneNumber(raw, data.selectedCountry?.cca2 || "LB");
   setData((prev) => ({
     ...prev,
     userPhone: formatted,

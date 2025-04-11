@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./ServiceReq.css";
 import SelectDropdown from "../Select-Dropdown/SelectDropdown";
 import {
@@ -7,10 +7,10 @@ import {
   handlePhoneChange,
   handleSubmit,
 } from "@handlers/ReqFormActionsHandles.jsx";
-import axios from "axios";
+// import axios from "axios";
+import countries from "@assets/json/countries.json";
 
 export default function ServiceReqForm() {
-  const [countries, setCountries] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
   const [data, setData] = useState({
     title: "",
@@ -22,38 +22,38 @@ export default function ServiceReqForm() {
     selectedService: "",
   });
 
-  useEffect(() => {
-    const fetchCountries = async () => {
-      try {
-        const { data } = await axios.get("https://restcountries.com/v3.1/all");
+  // useEffect(() => {
+  //   const fetchCountries = async () => {
+  //     try {
+  //       const { data } = await axios.get("https://restcountries.com/v3.1/all");
 
-        const options = data
-          .filter(
-            (country) =>
-              country.name.common !== "Israel" &&
-              country.idd?.root &&
-              country.idd?.suffixes &&
-              country.idd.suffixes.length > 0
-          )
-          .map((country) => ({
-            name: country.cca2,
-            code: country.idd.root + country.idd.suffixes[0],
-            flag: country.flags.png,
-          }))
-          .sort((a, b) => a.name.localeCompare(b.name));
+  //       const options = data
+  //         .filter(
+  //           (country) =>
+  //             country.name.common !== "Israel" &&
+  //             country.idd?.root &&
+  //             country.idd?.suffixes &&
+  //             country.idd.suffixes.length > 0
+  //         )
+  //         .map((country) => ({
+  //           name: country.cca2,
+  //           code: country.idd.root + country.idd.suffixes[0],
+  //           flag: country.flags.png,
+  //         }))
+  //         .sort((a, b) => a.name.localeCompare(b.name));
 
-        setCountries(options);
-        setData((prev) => ({
-          ...prev,
-          selectedCountry: options.find((c) => c.code === "+961"),
-        }));
-      } catch (err) {
-        console.error("Error fetching countries", err);
-      }
-    };
+  //       setCountries(options);
+  //       setData((prev) => ({
+  //         ...prev,
+  //         selectedCountry: options.find((c) => c.code === "+961"),
+  //       }));
+  //     } catch (err) {
+  //       console.error("Error fetching countries", err);
+  //     }
+  //   };
 
-    fetchCountries();
-  }, []);
+  //   fetchCountries();
+  // }, []);
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
@@ -64,7 +64,7 @@ export default function ServiceReqForm() {
           handleSubmit(e, data);
         }}
       >
-        <div className="phone-input-container flex gap-4 items-center relative">
+        <div className="phone-input-container flex gap-4 items-center relative flex-col">
           <input
             type="text"
             name="title"
@@ -105,22 +105,23 @@ export default function ServiceReqForm() {
             }}
             className="email-input"
           />
+          <div className="flex items-center gap-2 relative w-full">
           <div className="custom-dropdown" onClick={toggleDropdown}>
-            {data.selectedCountry && (
-              <div className="selected-option w-[170px] bg-white flex items-center gap-4 cursor-pointer duration-300 hover:bg-[#f5f5f5] py-1 px-2 rounded">
-                <img
+            
+              <div className="selected-option w-[110px] bg-white flex items-center gap-4 cursor-pointer duration-300 hover:bg-[#f5f5f5] py-1 px-2 rounded">
+                {selectCountry && <img
                   src={data.selectedCountry.flag}
                   alt={data.selectedCountry.name}
                   width={20}
-                />
+                />}
                 <span>
-                  {data.selectedCountry.name} ({data.selectedCountry.code})
+                  {data.selectedCountry.code || "+ -"}
                 </span>
               </div>
-            )}
+            
             {isOpen && (
               <div className="dropdown-menu absolute z-20 bg-white border max-h-60 overflow-y-auto w-full shadow">
-                {countries.map((country, index) => (
+                {countries.countries.map((country, index) => (
                   <div
                     key={index}
                     className="dropdown-item flex items-center gap-2 px-2 py-1 cursor-pointer hover:bg-gray-200"
@@ -128,7 +129,7 @@ export default function ServiceReqForm() {
                   >
                     <img src={country.flag} alt={country.name} width={20} />
                     <span>
-                      {country.name} ({country.code})
+                      ({country.code})
                     </span>
                   </div>
                 ))}
@@ -146,7 +147,7 @@ export default function ServiceReqForm() {
             className="number-input"
           />
         </div>
-
+      </div>
         <SelectDropdown Data={data.selectedService} setData={setData} />
 
         <div className="btn-container flex w-full align-center justify-center py-2">

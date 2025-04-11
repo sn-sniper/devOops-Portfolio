@@ -33,6 +33,7 @@ body::-webkit-scrollbar-thumb:hover {
 
 body.overflow-hidden {
   overflow: hidden;
+  height: 100lvh;
 }
 
 ::selection {

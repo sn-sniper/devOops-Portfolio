@@ -7,7 +7,7 @@ import { parsePhoneNumberWithError, AsYouType } from "libphonenumber-js";
  * @param {string} countryCode - The country code (e.g., "US", "LB").
  * @returns {boolean} - Returns true if the phone number is valid.
  */
-export function isValidPhoneNumber(phone, countryCode = "US") {
+export function isValidPhoneNumber(phone, countryCode) {
   try {
     const phoneNumber = parsePhoneNumberWithError(phone, countryCode);
     return phoneNumber.isValid();
@@ -23,7 +23,7 @@ export function isValidPhoneNumber(phone, countryCode = "US") {
  * @param {string} countryCode - Country code (e.g., "US", "LB").
  * @returns {string} - Formatted phone number.
  */
-export function formatPhoneNumber(input, countryCode = "US") {
+export function formatPhoneNumber(input, countryCode) {
   const formatter = new AsYouType(countryCode);
   return formatter.input(input);
 }
