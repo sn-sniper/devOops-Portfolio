@@ -5,9 +5,9 @@ export default function HContact() {
   return (
     <div className='HContact-Container'>
       <div className="HContact-content">
-        <Subheader text="Connect with us" bg={true} />
+        <Subheader text="Get to know us" bg={true} />
         <h1>We are committed to delivering only the best</h1>
-        <Btnt text="Get Started" bg={true} border={false} />
+        <Btnt text="Our Team" bg={true} border={false} />
       </div>
     </div>
   )
