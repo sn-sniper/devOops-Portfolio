@@ -3,10 +3,15 @@ import AOverlay from "./ui/About-Overlay/AOverlay";
 import { assets } from "@assets/assets";
 import Subheader from "./ui/Subhead/Subheader";
 import Btnt from "./ui/btns/btn-t";
+import Modal from "./ui/Modal/Modal";
 import AboutBox from "./ui/About-box/AboutBox";
 import data from "@assets/json/about.json";
+import { useState } from "react";
+import BookCallReqForm from "./ui/Forms/BookCallReq";
 
 export default function About() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="About-container">
       <div className="left-section">
@@ -31,7 +36,19 @@ export default function About() {
               building scalable mobile apps, our team ensures every project
               meets the highest standards of creativity and functionality.
             </h1>
-            <Btnt text="book a call" bg={true} border={true} />
+            <Btnt
+              text="book a call"
+              bg={true}
+              border={true}
+              action={() => setIsModalOpen(true)}
+            />
+            <Modal
+              header="Book a Call"
+              isOpen={isModalOpen}
+              onClose={() => setIsModalOpen(false)}
+            >
+              <BookCallReqForm />
+            </Modal>
           </div>
         </div>
       </div>
